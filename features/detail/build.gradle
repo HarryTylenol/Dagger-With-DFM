@@ -1,0 +1,37 @@
+apply plugin: "com.android.dynamic-feature"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    def dagger_version = "2.25.3"
+    def deeplink_dispatch_version = "4.1.0"
+
+    implementation project(":app")
+    implementation project(":core")
+
+    kapt "com.airbnb:deeplinkdispatch-processor:$deeplink_dispatch_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    kapt "com.android.databinding:compiler:4.0.0-alpha08"
+}

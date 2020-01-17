@@ -1,0 +1,24 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    package="app.harry.detail">
+
+    <dist:module
+        dist:instant="false"
+        dist:title="@string/title_detail">
+        <dist:delivery>
+            <dist:install-time />
+        </dist:delivery>
+        <dist:fusing dist:include="true" />
+    </dist:module>
+
+    <application
+        android:name="app.harry.core.di.App"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="app.harry.detail.ui.DetailActivity"
+            android:parentActivityName="app.harry.daggerwithdfm.ui.main.HomeActivity" />
+
+    </application>
+
+</manifest>
