@@ -1,6 +1,6 @@
 # **Dagger With DFM (Dynamic Feature Module)**
 
-Android AAC, DataBinding, ViewModel, Dagger2, DeepLinkDispatch, Dynamic Feature Module
+Android AAC, DataBinding, Dagger2, DeepLinkDispatch, Dynamic Feature Module
 
 #### Modules
 - core
