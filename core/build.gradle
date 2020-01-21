@@ -35,11 +35,6 @@ android {
 
 dependencies {
 
-    def lifecycle_version = "2.2.0-rc03"
-    def dagger_version = "2.25.3"
-    def deeplink_dispatch_version = "4.1.0"
-    def retrofit_version = "2.6.2"
-
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -56,7 +51,7 @@ dependencies {
     api "com.airbnb:deeplinkdispatch:$deeplink_dispatch_version"
 
     api "com.google.dagger:dagger:$dagger_version"
-    api "com.google.dagger:dagger-android:$dagger_version"
+    api "com.google.dagger:dagger-android:${dagger_version}"
     api "com.google.dagger:dagger-android-support:$dagger_version"
     api "com.squareup.retrofit2:retrofit:$retrofit_version"
 
@@ -65,7 +60,7 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:$dagger_version"
     kapt "com.android.databinding:compiler:4.0.0-alpha08"
 
-    testApi "junit:junit:4.12"
+    testApi 'junit:junit:4.13'
     androidTestApi "androidx.test.ext:junit:1.1.1"
     androidTestApi "androidx.test.espresso:espresso-core:3.2.0"
 }

@@ -24,9 +24,6 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
 
-    def dagger_version = "2.25.3"
-    def deeplink_dispatch_version = "4.1.0"
-
     implementation project(":app")
     implementation project(":core")
 
