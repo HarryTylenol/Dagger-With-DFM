@@ -1,0 +1,22 @@
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    kapt "com.airbnb:deeplinkdispatch-processor:$deeplink_dispatch_version"
+    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
+    kapt "com.android.databinding:compiler:$build_tool_version"
+
+    testApi 'junit:junit:4.13'
+    androidTestApi "androidx.test.ext:junit:1.1.1"
+    androidTestApi "androidx.test.espresso:espresso-core:3.2.0"
+
+}

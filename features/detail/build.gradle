@@ -1,6 +1,6 @@
 apply plugin: "com.android.dynamic-feature"
-apply plugin: "kotlin-android"
-apply plugin: "kotlin-kapt"
+
+apply from: '../../common.gradle'
 
 android {
     compileSdkVersion 29
@@ -23,12 +23,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-
     implementation project(":app")
     implementation project(":core")
-
-    kapt "com.airbnb:deeplinkdispatch-processor:$deeplink_dispatch_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
-    kapt "com.google.dagger:dagger-android-processor:$dagger_version"
-    kapt "com.android.databinding:compiler:4.0.0-alpha08"
 }
